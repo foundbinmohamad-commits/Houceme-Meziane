@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الأوراق - Houceme Meziane</title>
+    <link rel="stylesheet" href="cards-design.css">
+    <link rel="stylesheet" href="card-icons.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a472a 0%, #0d2818 100%);
+            color: #ffffff;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #d4af37;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            color: #b0b0b0;
+            margin: 10px 0 0 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin: 40px 0;
+        }
+
+        .card-section {
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid #d4af37;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .card-section h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #d4af37;
+        }
+
+        .card-section p {
+            font-size: 0.95em;
+            color: #c0c0c0;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .cards-row {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .card-face.gallery-card {
+            width: 140px;
+            height: 190px;
+        }
+
+        .card-face.gallery-card::after {
+            font-size: 5em;
+        }
+
+        .suit-info {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .suit-item {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid #d4af37;
+            border-radius: 8px;
+            padding: 15px;
+            font-size: 0.9em;
+        }
+
+        .suit-item strong {
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .suit-symbol-large {
+            font-size: 2em;
+            margin: 10px 0;
+        }
+
+        .info-box {
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid #d4af37;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: right;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #d4af37 0%, #c9a227 100%);
+            color: #000000;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .suit-info {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎴 معرض الأوراق الملكية 🎴</h1>
+            <p>Houceme Meziane Card Gallery</p>
+        </div>
+
+        <div class="gallery">
+            <!-- الملوك -->
+            <div class="card-section">
+                <h2>👑 الملوك (Kings)</h2>
+                <p>البطاقات الملكية الأقوى في اللعبة، تمثل القوة والسلطة.</p>
+                
+                <div class="cards-row">
+                    <div class="card-face gallery-card king hearts"></div>
+                    <div class="card-face gallery-card king diamonds"></div>
+                    <div class="card-face gallery-card king clubs"></div>
+                    <div class="card-face gallery-card king spades"></div>
+                </div>
+
+                <div class="suit-info">
+                    <div class="suit-item">
+                        <strong>♥ القلوب</strong>
+                        <span>الأحمر</span>
+                    </div>
+                    <div class="suit-item">
+                        <strong>♦ الماس</strong>
+                        <span>الأحمر</span>
+                    </div>
+                    <div class="suit-item">
+                        <strong>♣ النوادي</strong>
+                        <span>الأسود</span>
+                    </div>
+                    <div class="suit-item">
+                        <strong>♠ البستان</strong>
+                        <span>الأسود</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الملكات -->
+            <div class="card-section">
+                <h2>👸 الملكات (Queens)</h2>
+                <p>الملكات الأنيقات، ثاني أقوى بطاقة في اللعبة.</p>
+                
+                <div class="cards-row">
+                    <div class="card-face gallery-card queen hearts"></div>
+                    <div class="card-face gallery-card queen diamonds"></div>
+                    <div class="card-face gallery-card queen clubs"></div>
+                    <div class="card-face gallery-card queen spades"></div>
+                </div>
+
+                <div class="suit-info">
+                    <div class="suit-item">
+                        <strong>♥ القلوب</strong>
+                        <span>الأحمر</span>
+                    </div>
+                    <div class="suit-item">
+                        <strong>♦ الماس</strong>
+                        <span>الأحمر</span>
+                    </div>
+                    <div class="suit-item">
+                        <strong>♣ النوادي</strong>
+                        <span>الأسود</span>
+                    </div>
+                    <div class="suit-item">
+                        <strong>♠ البستان</strong>
+                        <span>الأسود</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الفرسان -->
+            <div class="card-section">
+                <h2>🤴 الفرسان (Jacks)</h2>
+                <p>الفرسان الشجعان، ثالث أقوى بطاقة في اللعبة.</p>
+                
+                <div class="cards-row">
+                    <div class="card-face gallery-card jack hearts"></div>
+                    <div class="card-face gallery-card jack diamonds"></div>
+                    <div class="card-face gallery-card jack clubs"></div>
+                    <div class="card-face gallery-card jack spades"></div>
+                </div>
+
+                <div class="suit-info">
+                    <div class="suit-item">
+                        <strong>♥ القلوب</strong>
+                        <span>الأحمر</span>
+                    </div>
+                    <div class="suit-item">
+                        <strong>♦ الماس</strong>
+                        <span>الأحمر</span>
+                    </div>
+                    <div class="suit-item">
+                        <strong>♣ النوادي</strong>
+                        <span>الأسود</span>
+                    </div>
+                    <div class="suit-item">
+                        <strong>♠ البستان</strong>
+                        <span>الأسود</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الآسات -->
+            <div class="card-section">
+                <h2>⭐ الآسات (Aces)</h2>
+                <p>الآسات الذهبية، أقوى بطاقة فردية في اللعبة!</p>
+                
+                <div class="cards-row">
+                    <div class="card-face gallery-card ace hearts"></div>
+                    <div class="card-face gallery-card ace diamonds"></div>
+                    <div class="card-face gallery-card ace clubs"></div>
+                    <div class="card-face gallery-card ace spades"></div>
+                </div>
+
+                <div class="suit-info">
+                    <div class="suit-item">
+                        <strong>♥ القلوب</strong>
+                        <span>الأحمر</span>
+                    </div>
+                    <div class="suit-item">
+                        <strong>♦ الماس</strong>
+                        <span>الأحمر</span>
+                    </div>
+                    <div class="suit-item">
+                        <strong>♣ النوادي</strong>
+                        <span>الأسود</span>
+                    </div>
+                    <div class="suit-item">
+                        <strong>♠ البستان</strong>
+                        <span>الأسود</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- معلومات إضافية -->
+        <div class="info-box">
+            <h3>📊 معلومات عن الأوراق</h3>
+            <p><strong>إجمالي الأوراق:</strong> 52 ورقة (4 إشارات × 13 ورقة)</p>
+            <p><strong>الإشارات:</strong> قلوب ♥ (أحمر)، ماس ♦ (أحمر)، نوادي ♣ (أسود)، بستان ♠ (أسود)</p>
+            <p><strong>أقوى الأوراق:</strong> آس ♠ البستان، ثم آس ♥ القلوب، ثم الملوك، ثم الملكات، ثم الفرسان</p>
+            <p><strong>المطور:</strong> Houceme Meziane - 2026</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" class="back-link">← العودة للعبة</a>
+        </div>
+    </div>
+</body>
+</html>
