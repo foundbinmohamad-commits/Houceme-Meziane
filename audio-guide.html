@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل التحكم في الصوت - Houceme Meziane</title>
+    <link rel="stylesheet" href="audio-controls.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a472a 0%, #0d2818 100%);
+            color: #ffffff;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: #d4af37;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            color: #b0b0b0;
+        }
+
+        .guide-section {
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid #d4af37;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .guide-section h2 {
+            color: #d4af37;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .guide-item {
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid #d4af37;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .guide-item h3 {
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+
+        .guide-item p {
+            color: #c0c0c0;
+            line-height: 1.6;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .feature-card {
+            background: rgba(212, 175, 55, 0.1);
+            border: 2px solid #d4af37;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .feature-card .icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .feature-card h3 {
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 0.9em;
+            color: #b0b0b0;
+        }
+
+        .code-block {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid #d4af37;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            color: #51cf66;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #d4af37 0%, #c9a227 100%);
+            color: #000000;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+
+        .warning-box {
+            background: rgba(255, 107, 107, 0.1);
+            border-left: 4px solid #ff6b6b;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .warning-box strong {
+            color: #ff6b6b;
+        }
+
+        .success-box {
+            background: rgba(81, 207, 102, 0.1);
+            border-left: 4px solid #51cf66;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .success-box strong {
+            color: #51cf66;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .guide-section {
+                padding: 20px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎵 دليل التحكم في الصوت والموسيقى 🎵</h1>
+            <p>Houceme Meziane - Audio Control Guide</p>
+        </div>
+
+        <!-- الميزات الرئيسية -->
+        <div class="guide-section">
+            <h2>✨ الميزات الرئيسية</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">🔊</div>
+                    <h3>صوت الموسيقى</h3>
+                    <p>تحكم كامل في مستوى صوت الموسيقى الخلفية (0-100%)</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon">🔔</div>
+                    <h3>صوت المؤثرات</h3>
+                    <p>تحكم منفصل في أصوات المؤثرات والتنبيهات (0-100%)</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon">🔇</div>
+                    <h3>كتم الصوت</h3>
+                    <p>كتم جميع الأصوات والموسيقى بضغطة زر واحدة</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon">💾</div>
+                    <h3>حفظ تلقائي</h3>
+                    <p>حفظ التفضيلات تلقائياً وتحميلها عند العودة</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon">🎵</div>
+                    <h3>تبديل الموسيقى</h3>
+                    <p>تشغيل أو إيقاف الموسيقى الخلفية منفصلة</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon">🎶</div>
+                    <h3>تبديل المؤثرات</h3>
+                    <p>تشغيل أو إيقاف المؤثرات الصوتية منفصلة</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- الأزرار التحكم -->
+        <div class="guide-section">
+            <h2>🎮 أزرار التحكم</h2>
+            
+            <div class="guide-item">
+                <h3>🔊 زر كتم الصوت (Mute)</h3>
+                <p>
+                    <strong>الوظيفة:</strong> كتم أو تشغيل جميع الأصوات والموسيقى<br>
+                    <strong>الحالة:</strong> يتغير اللون من ذهبي 🔊 إلى أحمر 🔇 عند الكتم<br>
+                    <strong>الاختصار:</strong> يمكن إعادة تشغيل الأصوات بالضغط مرة أخرى
+                </p>
+            </div>
+
+            <div class="guide-item">
+                <h3>🎵 زر الموسيقى</h3>
+                <p>
+                    <strong>الوظيفة:</strong> تشغيل أو إيقاف الموسيقى الخلفية<br>
+                    <strong>الحالة:</strong> نشط 🎵 أو معطل 🎶<br>
+                    <strong>ملاحظة:</strong> لا يؤثر على أصوات المؤثرات
+                </p>
+            </div>
+
+            <div class="guide-item">
+                <h3>🔔 زر المؤثرات الصوتية</h3>
+                <p>
+                    <strong>الوظيفة:</strong> تشغيل أو إيقاف أصوات المؤثرات<br>
+                    <strong>الحالة:</strong> نشط 🔔 أو معطل 🔕<br>
+                    <strong>التأثر:</strong> يؤثر على أصوات الرهان والفوز والخسارة والاختيار
+                </p>
+            </div>
+        </div>
+
+        <!-- المنزلقات -->
+        <div class="guide-section">
+            <h2>🎚️ منزلقات مستوى الصوت</h2>
+            
+            <div class="guide-item">
+                <h3>🎼 منزلق صوت الموسيقى</h3>
+                <p>
+                    اضبط مستوى الموسيقى الخلفية من 0% (صامت) إلى 100% (أقصى)</br>
+                    <strong>التأثير:</strong> يتغير الصوت فوراً أثناء التعديل
+                </p>
+            </div>
+
+            <div class="guide-item">
+                <h3>🔊 منزلق صوت المؤثرات</h3>
+                <p>
+                    اضبط مستوى المؤثرات الصوتية من 0% (صامت) إلى 100% (أقصى)<br>
+                    <strong>التأثير:</strong> يتغير الصوت فوراً للأصوات الجديدة
+                </p>
+            </div>
+        </div>
+
+        <!-- أنواع الأصوات -->
+        <div class="guide-section">
+            <h2>🎵 أنواع الأصوات في اللعبة</h2>
+            
+            <div class="guide-item">
+                <h3>💰 صوت الرهان (Bet Sound)</h3>
+                <p>
+                    <strong>الوصف:</strong> نغمة A4 (440 Hz)<br>
+                    <strong>الاستخدام:</strong> عند تأكيد الرهان<br>
+                    <strong>المدة:</strong> 0.1 ثانية
+                </p>
+            </div>
+
+            <div class="guide-item">
+                <h3>🃏 صوت التوزيع (Deal Sound)</h3>
+                <p>
+                    <strong>الوصف:</strong> نغمة D5 (587.33 Hz)<br>
+                    <strong>الاستخدام:</strong> عند توزيع الأوراق<br>
+                    <strong>المدة:</strong> 0.1 ثانية
+                </p>
+            </div>
+
+            <div class="guide-item">
+                <h3>🏆 صوت الفوز (Win Sound)</h3>
+                <p>
+                    <strong>الوصف:</strong> نغمة E5 (659.25 Hz)<br>
+                    <strong>الاستخدام:</strong> عند الفوز في اللعبة<br>
+                    <strong>المدة:</strong> 0.2 ثانية
+                </p>
+            </div>
+
+            <div class="guide-item">
+                <h3>❌ صوت الخسارة (Lose Sound)</h3>
+                <p>
+                    <strong>الوصف:</strong> نغمة D4 (293.66 Hz)<br>
+                    <strong>الاستخدام:</strong> عند الخسارة في اللعبة<br>
+                    <strong>المدة:</strong> 0.2 ثانية
+                </p>
+            </div>
+
+            <div class="guide-item">
+                <h3>✅ صوت الاختيار (Select Sound)</h3>
+                <p>
+                    <strong>الوصف:</strong> نغمة C5 (523.25 Hz)<br>
+                    <strong>الاستخدام:</strong> عند اختيار أوراق أو خيارات<br>
+                    <strong>المدة:</strong> 0.08 ثانية
+                </p>
+            </div>
+
+            <div class="guide-item">
+                <h3>⏰ صوت التنبيه (Tick Sound)</h3>
+                <p>
+                    <strong>الوصف:</strong> نغمة عالية (800 Hz)<br>
+                    <strong>الاستخدام:</strong> تنبيه عند قرب انتهاء الوقت<br>
+                    <strong>المدة:</strong> 0.05 ثانية
+                </p>
+            </div>
+        </div>
+
+        <!-- الحفظ والاستعادة -->
+        <div class="guide-section">
+            <h2>💾 حفظ التفضيلات</h2>
+            
+            <div class="success-box">
+                <strong>✅ الحفظ التلقائي:</strong><br>
+                جميع التفضيلات (مستويات الصوت، الكتم، التبديلات) تُحفظ تلقائياً<br>
+                عند إغلاق اللعبة وتُحمّل تلقائياً عند العودة
+            </div>
+
+            <div class="guide-item">
+                <h3>📍 مكان التخزين</h3>
+                <p>
+                    <strong>التخزين:</strong> LocalStorage (ذاكرة المتصفح)<br>
+                    <strong>المفتاح:</strong> <code>audioPreferences</code><br>
+                    <strong>البيانات:</strong> JSON format
+                </p>
+            </div>
+
+            <div class="code-block">
+{
+  "musicVolume": 0.5,
+  "sfxVolume": 0.7,
+  "isMuted": false,
+  "musicEnabled": true,
+  "sfxEnabled": true
+}
+            </div>
+        </div>
+
+        <!-- الاستخدام -->
+        <div class="guide-section">
+            <h2>📖 كيفية الاستخدام</h2>
+            
+            <div class="guide-item">
+                <h3>الخطوة 1: فتح لوحة التحكم</h3>
+                <p>تظهر لوحة التحكم تلقائياً في الزاوية العلوية اليسرى من الشاشة</p>
+            </div>
+
+            <div class="guide-item">
+                <h3>الخطوة 2: اختيار التحكم</h3>
+                <p>
+                    🔊 اضغط الأزرار لتبديل الحالة<br>
+                    🎚️ اسحب المنزلقات لتعديل مستوى الصوت
+                </p>
+            </div>
+
+            <div class="guide-item">
+                <h3>الخطوة 3: الحفظ</h3>
+                <p>التفضيلات تُحفظ تلقائياً - لا تحتاج لفعل شيء</p>
+            </div>
+        </div>
+
+        <!-- معلومات تقنية -->
+        <div class="guide-section">
+            <h2>⚙️ معلومات تقنية</h2>
+            
+            <div class="warning-box">
+                <strong>ملاحظة مهمة:</strong> 
+                النظام يستخدم Web Audio API لتوليد الأصوات<br>
+                بعض المتصفحات القديمة قد لا تدعم هذه الميزة بالكامل
+            </div>
+
+            <div class="guide-item">
+                <h3>🔧 التقنيات المستخدمة</h3>
+                <p>
+                    <strong>Web Audio API:</strong> لتوليد وتشغيل الأصوات<br>
+                    <strong>AudioContext:</strong> لإدارة السياق الصوتي<br>
+                    <strong>Oscillator:</strong> لإنشاء الموجات الصوتية<br>
+                    <strong>GainNode:</strong> للتحكم في مستوى الصوت
+                </p>
+            </div>
+
+            <div class="guide-item">
+                <h3>🌐 ال��وافقية</h3>
+                <p>
+                    <strong>المتصفحات المدعومة:</strong><br>
+                    ✅ Chrome/Chromium<br>
+                    ✅ Firefox<br>
+                    ✅ Safari<br>
+                    ✅ Edge<br>
+                    ⚠️ Internet Explorer (غير مدعوم)
+                </p>
+            </div>
+        </div>
+
+        <!-- الاستكشاف والإصلاح -->
+        <div class="guide-section">
+            <h2>🔧 استكشاف الأخطاء</h2>
+            
+            <div class="guide-item">
+                <h3>❌ لا أسمع أي صوت</h3>
+                <p>
+                    1. تحقق من أن المتصفح لم يكتم الصوت<br>
+                    2. تأكد من تفعيل المؤثرات والموسيقى (أزرار خضراء)<br>
+                    3. تحقق من مستويات الصوت (المنزلقات)<br>
+                    4. تحقق من أن الكمبيوتر نفسه لم يكتم الصوت
+                </p>
+            </div>
+
+            <div class="guide-item">
+                <h3>⚠️ الأصوات تقطع أو غريبة</h3>
+                <p>
+                    1. قد يكون هناك تداخل من تطبيقات أخرى<br>
+                    2. جرب تحديث المتصفح<br>
+                    3. امسح ذاكرة التخزين المؤقت وأعد تحميل الصفحة
+                </p>
+            </div>
+
+            <div class="guide-item">
+                <h3>💾 التفضيلات لم تُحفظ</h3>
+                <p>
+                    1. تأكد من السماح للمتصفح بتخزين البيانات<br>
+                    2. تحقق من أن LocalStorage غير معطل<br>
+                    3. جرب متصفح آخر
+                </p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" class="back-link">← العودة للعبة</a>
+        </div>
+    </div>
+</body>
+</html>
