@@ -1,0 +1,65 @@
+/* ============================================
+   الصور والأيقونات للأوراق - Card Icons SVG
+   ============================================ */
+
+/* Inline SVG Icons for Cards */
+
+/* King Icon SVG */
+.king-icon::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="30" r="15" fill="currentColor"/><path d="M35 50 L40 70 L60 70 L65 50 Z" fill="currentColor"/><path d="M40 55 L30 60" stroke="currentColor" stroke-width="2"/><path d="M60 55 L70 60" stroke="currentColor" stroke-width="2"/><path d="M50 30 L50 45" stroke="currentColor" stroke-width="2"/></svg>');
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+
+/* Queen Icon SVG */
+.queen-icon::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="25" r="12" fill="currentColor"/><path d="M30 35 L35 40 M70 35 L65 40" stroke="currentColor" stroke-width="2"/><path d="M40 50 L45 70 L55 70 L60 50 Z" fill="currentColor"/><path d="M50 25 L50 40" stroke="currentColor" stroke-width="2"/><path d="M50 40 L50 50" stroke="currentColor" stroke-width="2"/></svg>');
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+
+/* Jack Icon SVG */
+.jack-icon::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="28" r="12" fill="currentColor"/><path d="M50 40 L50 60 Q50 70 40 70" stroke="currentColor" stroke-width="3" fill="none"/><path d="M40 60 L30 70" stroke="currentColor" stroke-width="2"/><path d="M60 60 L70 70" stroke="currentColor" stroke-width="2"/></svg>');
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+
+/* Ace Icon SVG */
+.ace-icon::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 20 L30 70 L70 70 Z" fill="currentColor"/><path d="M45 40 L55 40" stroke="white" stroke-width="2"/><circle cx="50" cy="50" r="8" fill="white"/></svg>');
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+
+/* Heart Symbol */
+.heart-symbol::before {
+    content: '♥';
+    color: #e74c3c;
+    font-size: 2em;
+}
+
+/* Diamond Symbol */
+.diamond-symbol::before {
+    content: '♦';
+    color: #e74c3c;
+    font-size: 2em;
+}
+
+/* Club Symbol */
+.club-symbol::before {
+    content: '♣';
+    color: #2c3e50;
+    font-size: 2em;
+}
+
+/* Spade Symbol */
+.spade-symbol::before {
+    content: '♠';
+    color: #2c3e50;
+    font-size: 2em;
+}
